@@ -22,3 +22,14 @@ alias rootq='root -q'
 
 # clear
 alias cl="clear"
+
+
+# git
+alias ga="git add ."
+alias gs="git status"
+alias gc="git commit -m"
+alias gi="git init"
+alias gp="git push -u"
+
+
+
