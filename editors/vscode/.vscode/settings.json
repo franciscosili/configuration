@@ -1,0 +1,230 @@
+{"fortran.includePaths": [
+    "/usr/local/include",
+     "/usr/local"
+],
+    "[fortran_free-form]": {
+        
+    },
+    "editor.minimap.maxColumn": 80,
+    "workbench.colorTheme": "Base16 Eighties Dark",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "editor.rulers": [
+        100,
+    ],
+    "editor.stickyTabStops": true,
+    "editor.minimap.enabled": false,
+
+    "terminal.external.osxExec": "iTerm2.app",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.macOptionIsMeta": true,
+    "terminal.integrated.tabs.showActiveTerminal": "always",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "extensions.ignoreRecommendations": true,
+    "git.ignoreLegacyWarning": true,
+    "workbench.startupEditor": "none",
+    "git.autofetch": true,
+    "window.zoomLevel": -1,
+    "editor.formatOnPaste": true,
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.inheritEnv": false,
+
+
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+    // Latex settings
+    "latex-workshop.view.pdf.viewer": "tab",
+    // "latex-workshop.latex.outDir": "%DIR%/output",
+    "latex-workshop.message.badbox.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.log",
+        "*.bcf",
+        "*.xml",
+        "*.fdb_latexmk",
+        "*.snm",
+        "*.synctex(busy)",
+        "*.synctex.gz(busy)",
+        "*.nav",
+        "*.synctex.gz"
+    ],
+    "latex-workshop.latex.autoBuild.run": "never",
+    
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                // "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+    ],
+
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "[latex]": {
+
+        "editor.formatOnPaste": false,
+        "editor.suggestSelection": "recentlyUsedByPrefix",
+        "editor.wordWrap": "on",
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    // "latex-workshop.latex.recipe.default": "pdflatex -> bibtex -> pdflatex`×2",
+    "latex-workshop.bibtex-fields.sort.enabled": true,
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+
+
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+    // Color theme personalization
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "meta.function-call.generic.python",
+                "settings": {
+                    "foreground": "#6699cc"
+                }
+            },
+            {
+                "scope": [
+                    "variable.language.special.self.python",
+                    "variable.parameter.function.language.special.self.python",
+                ],
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#f2777a"
+                }
+            },
+            {
+                "scope": [
+                    "support.type.python",
+                ],
+                "settings": {
+                    "foreground": "#66CCCC"
+                }
+            },
+
+            {
+                "scope": [
+                    "meta.body.function.definition.cpp",
+                ],
+                "settings": {
+                    "foreground": "#D3D0C8"
+                }
+            },
+            {
+                "scope": "variable",
+                "settings": {
+                    "foreground": "#D3D0C8"
+                }
+            },
+            {
+                "scope": [
+                    "keyword.operator.new",
+                    "punctuation.separator.pointer-access.cpp",
+                    "keyword.operator"
+                ],
+                "settings": {
+                    "foreground": "#f2777a"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.scope-resolution.function.call.cpp",
+                    "entity.name.scope-resolution.template.call.cpp",
+                    "entity.name.scope-resolution.cpp"
+                ],
+                "settings": {
+                    "foreground": "#f2777a"
+                }
+            },
+            {
+                "scope": [
+                    "entity.name.function.call.cpp",
+                ],
+                "settings": {
+                    "foreground": "#6699CC",
+                }
+            }
+        ]
+    },
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#fcfcfc87",
+        "editorIndentGuide.background": "#ffffff34"
+    },
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+    
+    
+    "git.confirmSync": false,
+    "workbench.editor.untitled.hint": "hidden",
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true
+    },
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.scrollback": 50000,
+    "editor.wordWrapColumn": 100,
+    
+    
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+    // Python personalization
+    "jupyter.codeLenses": "",
+    "jupyter.debugCodeLenses": "",
+    "jupyter.enableCellCodeLens": false,
+    "notebook.insertToolbarLocation": "hidden",
+    "notebook.consolidatedRunButton": true,
+    "notebook.showCellStatusBar": "visibleAfterExecute",
+    "notebook.cellToolbarLocation": {
+        "default": "hidden"
+    },
+    "jupyter.askForKernelRestart": false,
+    "python.analysis.completeFunctionParens": true,
+    "python.autoComplete.addBrackets": true,
+    "python.formatting.autopep8Args": ["--max-line-length=100"]
+    // ------------------------------------------------------------------------------------------
+    // ------------------------------------------------------------------------------------------
+}

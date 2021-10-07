@@ -1,0 +1,5 @@
+ssl_verify: true
+channels:
+  - conda-forge
+  - defaults
+allow_conda_downgrades: true

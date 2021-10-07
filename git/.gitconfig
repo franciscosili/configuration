@@ -1,0 +1,18 @@
+[user]
+	name = Francisco Sili
+	email = fancisco.sili@cern.ch
+[core]
+	excludesfile = /Users/francisco/.gitignore_global
+	editor = /usr/local/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/francisco/.stCommitMsg
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
