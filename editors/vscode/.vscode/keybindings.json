@@ -46,5 +46,29 @@
     {
         "key": "alt+\\",
         "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+g p",
+        "command": "gitlens.pushRepositories"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "shift+cmd+a",
+        "command": "workbench.action.toggleActivityBarVisibility"
     }
 ]

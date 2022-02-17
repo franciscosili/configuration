@@ -1,10 +1,13 @@
-{"fortran.includePaths": [
-    "/usr/local/include",
-     "/usr/local"
-],
+{
+    "fortran.includePaths": [
+        "/usr/local/include",
+        "/usr/local"
+    ],
+
     "[fortran_free-form]": {
-        
+
     },
+    
     "editor.minimap.maxColumn": 80,
     "workbench.colorTheme": "Base16 Eighties Dark",
     "workbench.editorAssociations": {
@@ -63,7 +66,8 @@
         "*.synctex(busy)",
         "*.synctex.gz(busy)",
         "*.nav",
-        "*.synctex.gz"
+        "*.synctex.gz",
+        "*.vrb"
     ],
     "latex-workshop.latex.autoBuild.run": "never",
     
@@ -224,7 +228,17 @@
     "jupyter.askForKernelRestart": false,
     "python.analysis.completeFunctionParens": true,
     "python.autoComplete.addBrackets": true,
-    "python.formatting.autopep8Args": ["--max-line-length=100"]
+    "python.formatting.autopep8Args": [
+        "--max-line-length=100"
+    ],
+
+    "window.newWindowDimensions": "inherit",
+    "workbench.tree.indent": 18,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.hover.delay": 3000,
+    "sync.autoUpload": true,
+    "sync.autoDownload": true
     // ------------------------------------------------------------------------------------------
     // ------------------------------------------------------------------------------------------
 }
