@@ -1,0 +1,33 @@
+# -*- mode: sh -*-
+# zsh aliases
+
+# ls
+alias ll='ls -lh'
+alias la='ls -lha'
+alias l1='ls -1'
+
+# root
+alias root='root -l'
+alias rootq='root -q'
+
+# clear
+alias cl="clear"
+
+# git
+alias ga="git add ."
+alias gs="git status"
+alias gc="git commit -m"
+alias gi="git init"
+alias gp="git push -u"
+
+
+# tar
+alias tarc="tar -cvf"
+alias tare="tar -xzvf"
+
+# cd-ing up
+function cd_up() {
+  cd $(printf "%0.s../" $(seq 1 $1 ));
+}
+alias 'cd..'='cd_up'
+
