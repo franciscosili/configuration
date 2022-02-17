@@ -23,8 +23,6 @@
 " Search results counter
     Plug 'vim-scripts/IndexedSearch'
 " A couple of nice colorschemes
-" Plug 'fisadev/fisa-vim-colorscheme'
-" Plug 'patstockwell/vim-monokai-tasty'
     Plug 'chriskempson/base16-vim'
 " Airline
     Plug 'vim-airline/vim-airline'
@@ -35,7 +33,6 @@
 " Pending tasks list
     Plug 'fisadev/FixedTaskList.vim'
 " Async autocompletion
-
     if using_neovim && vim_plug_just_installed
         Plug 'Shougo/deoplete.nvim', {'do': ':autocmd VimEnter * UpdateRemotePlugins'}
     else
@@ -45,7 +42,7 @@
     Plug 'roxma/nvim-yarp'
     Plug 'roxma/vim-hug-neovim-rpc'
 " Python autocompletion
-    Plug 'deoplete-plugins/deoplete-jedi'
+    "Plug 'deoplete-plugins/deoplete-jedi'
 " Completion from other opened files
     Plug 'Shougo/context_filetype.vim'
 " Just to add the python go-to-definition and similar features, autocompletion
@@ -81,12 +78,6 @@
     Plug 'vim-scripts/YankRing.vim'
 " Linters
     Plug 'neomake/neomake'
-" Relative numbering of lines (0 is the current line)
-" (disabled by default because is very intrusive and can't be easily toggled
-" on/off. When the plugin is present, will always activate the relative
-" numbering every time you go to normal mode. Author refuses to add a setting
-" to avoid that)
-    Plug 'myusuf3/numbers.vim'
 " Nice icons in the file explorer and file type status line.
     Plug 'ryanoasis/vim-devicons'
 
