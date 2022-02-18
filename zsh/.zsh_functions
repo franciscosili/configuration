@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+# cd-ing up
+function cd_up() {
+  cd $(printf "%0.s../" $(seq 1 $1 ));
+}
+
+# compress files
+compress(){
+    local input="$1"
+    local output="$2"
+
+    echo "tar -czvf ${output}.tar.gz ${input}"
+    tar -czvf ${output}.tar.gz ${input}
+}
