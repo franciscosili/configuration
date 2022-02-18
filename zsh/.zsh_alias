@@ -26,12 +26,7 @@ alias tarc="tar -cvf"
 alias tare="tar -xzvf"
 
 # cd-ing up
-#function cd_up() {
-  #cd $(printf "%0.s../" $(seq 1 $1 ));
-#}
 alias 'cd..'='cd_up'
-
-
 
 # ssh to lxplus
 alias slx="ssh lx"

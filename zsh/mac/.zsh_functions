@@ -31,8 +31,8 @@ dldc(){
     fi
 }
 
- # Connect to lxplus
- lxp(){
+# Connect to lxplus
+lxp(){
     local server="$1"
     local user="fsili"
     if [[ ! -z "$server" ]]; then
@@ -40,8 +40,8 @@ dldc(){
         local ssh_cmd="ssh ${user}@lxplus${server}.cern.ch"
     else
         local ssh_cmd="ssh ${user}@lxplus.cern.ch"
-    fi 
-    
+    fi
+
     echo ${ssh_cmd}
     eval ${ssh_cmd}
 }
