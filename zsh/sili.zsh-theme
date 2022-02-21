@@ -21,10 +21,10 @@ local user_host="%{$FG[123]%}%n%{$FG[123]%}@%{$B$FG[123]%}%m%{$reset_color%}"
 local current_dir="%{$FG[120]%}[%(5~|%-1~/…/%3~|%4~)]%{$reset_color%}"
 local prompt="%{$B$FG[214]%}$ %{$reset_color%}"
 dashed_lines="${(l.$(afmagic_dashes)..-.)}"
+git_prompt='%{$B$FG[green]%}$(git_prompt_info)%{$reset_color%}%'
 
 
-PROMPT="⌚ ${current_time} ${dashed_lines}${NEWLINE}${user_host}: ${current_dir}${NEWLINE}${prompt}"
-RPROMPT='%{$B$FG[green]%}$(git_prompt_info)%{$reset_color%}%'
+PROMPT="⌚ ${current_time} ${git_prompt}     ${dashed_lines}${NEWLINE}${user_host}: ${current_dir}${NEWLINE}${prompt}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}<%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
