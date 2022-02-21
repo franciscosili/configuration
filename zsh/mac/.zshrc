@@ -128,6 +128,12 @@ unset __conda_setup
 conda activate pyroot
 
 
+# <<< Functions >>>
+if [ -f ~/.zsh_functions ]; then
+    . ~/.zsh_functions
+fi
+# <<< Functions >>>
+
 # <<< Aliases >>>
 if [ -f ~/.zsh_alias ]; then
     . ~/.zsh_alias
