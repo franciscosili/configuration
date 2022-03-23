@@ -14,21 +14,38 @@ compress(){
     tar -czvf ${output}.tar.gz ${input}
 }
 
+# decompress files
+decompress(){
+    input="$1"
+    decompress="tar -xvf ${input}"
+
+    echo $decompress 
+    eval $decompress
+}
+
 # Download and decompress files
 dldc(){
     local input="$1"
     local output="$2"
     if [[ ! -z "$input" && ! -z "$output" ]]; then
-        local download="sftp fsili@lxplus.cern.ch:${input}.tar.gz ${output}.tar.gz"
-        local decompress="tar -xvf ${output} ${output}.tar.gz"
         echo Downloading file ${input}.tar.gz into ${output}.tar.gz
-        eval $dowload
-        echo Decompressing file ${output}.tar.gz into ${output}
-        eval $decompress
+        scp fsili@lxplus.cern.ch:${input}.tar.gz ${output}.tar.gz 
+        echo Decompressing file ${output}.tar.gz
+        #tar -xvf ${output}.tar.gz -C ${output} 
+        decompress ${output}.tar.gz
     else
         echo "Input and output not set.";
-        echo "Usage: dldc <input_file> <output_file>"
+        echo "Usage: dldc <input_file>.tar.gz <output_file>.tar.gz"
     fi
 }
 
-
+# Connect to lxplus
+lxp(){
+   local server="$1"
+   local user="fsili"
+   if [[ ! -z "$server" ]]; then
+       ssh ${user}@lxplus${server}.cern.ch
+   else
+       ssh ${user}@lxplus.cern.ch
+   fi 
+}

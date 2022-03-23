@@ -25,8 +25,14 @@ alias gp="git push -u"
 alias tarc="tar -cvf"
 alias tare="tar -xzvf"
 
-# cd-ing up
+# tmux
+alias tm="tmux"
+
+# vim
+alias vi="vim"
+
+
+
 alias 'cd..'='cd_up'
 
-# ssh to lxplus
-alias slx="ssh lx"
+
