@@ -2,9 +2,9 @@
 # zsh aliases
 
 # ls
-alias ll='ls -lh'
-alias la='ls -lha'
-alias l1='ls -1'
+alias ll='ls -lh --group-directories-first --color=auto'
+alias la='ls -lha --group-directories-first --color=auto'
+alias l1='ls -1 --group-directories-first --color=auto '
 
 # root
 alias root='root -l'
