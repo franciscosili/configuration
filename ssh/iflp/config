@@ -1,0 +1,40 @@
+
+Host lxplus lxplus.cern.ch lxplus*.cern.ch
+  #HostName lxplus.cern.ch
+  GSSAPITrustDns yes
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+  User fsili
+
+
+Host lxtunnel lxtunnel.cern.ch
+  User fsili
+  HostName lxtunnel.cern.ch
+  PubkeyAuthentication no
+  ForwardX11 yes
+  ControlPath ~/.ssh/controlmasters/%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+  Protocol 2
+  ServerAliveInterval 60
+  ServerAliveCountMax 2
+  DynamicForward 8090
+
+Host *
+  ServerAliveInterval 120
+  TCPKeepAlive no
+
+# Personal github account
+Host github.com
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_ed25519_github
+
+
+
+Host gitlab.cern.ch
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ed25519_gitlab
+
