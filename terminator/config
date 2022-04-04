@@ -1,0 +1,88 @@
+[global_config]
+  scroll_tabbar = True
+  title_transmit_bg_color = "#2d2d2d"
+  title_inactive_fg_color = "#ffffff"
+  title_inactive_bg_color = "#2d2d2d"
+  inactive_color_offset = 1.0
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+  always_split_with_profile = True
+  title_use_system_font = False
+[keybindings]
+  new_tab = <Primary>t
+  cycle_next = None
+  cycle_prev = None
+  go_up = <Primary><Alt><Super>Up
+  go_down = <Primary><Alt><Super>Down
+  go_left = <Primary><Alt><Super>Left
+  go_right = <Primary><Alt><Super>Right
+  split_horiz = <Alt>d
+  split_vert = <Alt>v
+  copy = <Primary><Shift>c
+  paste = <Primary><Shift>v
+  search = <Super>f
+  move_tab_right = <Shift><Super>Right
+  move_tab_left = <Shift><Super>Left
+  next_tab = <Alt>Right
+  prev_tab = <Alt>Left
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
+  switch_to_tab_5 = <Alt>5
+  switch_to_tab_6 = <Alt>6
+  new_window = <Primary>n
+[profiles]
+  [[default]]
+    audible_bell = True
+    background_color = "#282828"
+    cursor_color = "#aaaaaa"
+    cursor_color_fg = False
+    font = Roboto Mono 9
+    foreground_color = "#d3cfc7"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#1c1e25:#c05f68:#a2be89:#d1866c:#8ea0b3:#b58cad:#689d6a:#a89984:#676767:#f17679:#97ea97:#ffcb65:#6698cb:#d3869b:#8ec07c:#ebdbb2"
+    use_system_font = False
+  [[Tomorrow Night Eighties]]
+    audible_bell = True
+    background_color = "#2d2d2d"
+    background_darkness = 0.91
+    cursor_color = "#cccccc"
+    cursor_color_fg = False
+    font = Roboto Mono 8
+    foreground_color = "#cccccc"
+    show_titlebar = False
+    scroll_on_output = True
+    scrollback_infinite = True
+    palette = "#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff:#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 145:118
+      maximised = False
+      fullscreen = False
+      size = 1600, 950
+      title = fsili@leda:~
+      last_active_term = 743b5b25-9fa5-4097-8318-2ac7e26a1b3c
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = Tomorrow Night Eighties
+      uuid = 743b5b25-9fa5-4097-8318-2ac7e26a1b3c
+  [[old]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 1600. 950
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+[plugins]
