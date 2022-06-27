@@ -1,9 +1,17 @@
 #!/bin/zsh
 
-# cd-ing up
 function cd_up() {
-  cd $(printf "%0.s../" $(seq 1 $1 ));
+  case $1 in
+    *[!0-9]*)                                          # if no a number
+      cd $( pwd | sed -r "s|(.*/$1[^/]*/).*|\1|" )     # search dir_name in current path, if found - cd to it
+      ;;                                               # if not found - not cd
+    *)
+      cd $(printf "../" $(seq 1 $1));             # cd ../../../../  (N dirs)
+    ;;
+  esac
 }
+
+
 
 # compress files
 compress(){
