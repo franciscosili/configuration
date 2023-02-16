@@ -31,6 +31,21 @@ decompress(){
     eval $decompress
 }
 
+
+lxpdl(){
+    local lxplus_file="$1"
+
+    if [[ ! -z "$lxplus_file" ]]; then
+        echo Downloading file ${lxplus_file}
+        scp fsili@lxplus.cern.ch:${lxplus_file} . 
+    else
+        echo "Input and output not set.";
+        echo "Usage: lxpdldl <input_file>"
+    fi
+}
+
+
+
 # Download and decompress files
 dldc(){
     local input="$1"
@@ -63,3 +78,17 @@ lxp(){
 iflp(){
    ssh fsili@163.10.100.39
 }
+
+
+
+# Get a list of last lxplus sessions
+llxp(){
+    ssh fsili@lxplus.cern.ch "tail .lasthost.log"
+}
+
+
+
+
+
+
+
