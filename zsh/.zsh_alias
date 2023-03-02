@@ -12,6 +12,8 @@ alias rootq='root -q'
 
 # clear
 alias cl="clear"
+# clear and ls
+alias cla="clear; la"
 
 # git
 alias ga="git add ."
@@ -27,6 +29,12 @@ alias tare="tar -xzvf"
 
 # tmux
 alias tm="tmux"
+alias tma="tmux a -t"
+alias tmn="tmux new -s"
+
+
+
+
 
 # vim
 alias vi="vim"
@@ -35,4 +43,8 @@ alias vi="vim"
 
 alias 'cd..'='cd_up'
 
-
+# condor aliases
+alias cs="condor_submit"
+alias cq="condor_q"
+alias cw="watch condor_q -nobatch"
+alias cr="condor_rm"
