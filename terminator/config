@@ -1,43 +1,37 @@
 [global_config]
   scroll_tabbar = True
-  title_transmit_bg_color = "#2d2d2d"
-  title_inactive_fg_color = "#ffffff"
-  title_inactive_bg_color = "#2d2d2d"
   inactive_color_offset = 1.0
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   always_split_with_profile = True
-  title_use_system_font = False
 [keybindings]
   new_tab = <Primary>t
-  cycle_next = None
-  cycle_prev = None
-  go_up = <Primary><Alt><Super>Up
-  go_down = <Primary><Alt><Super>Down
-  go_left = <Primary><Alt><Super>Left
-  go_right = <Primary><Alt><Super>Right
-  split_horiz = <Alt>d
-  split_vert = <Alt>v
-  copy = <Primary><Shift>c
-  paste = <Primary><Shift>v
-  search = <Super>f
-  move_tab_right = <Shift><Super>Right
-  move_tab_left = <Shift><Super>Left
-  next_tab = <Alt>Right
-  prev_tab = <Alt>Left
-  switch_to_tab_1 = <Alt>1
-  switch_to_tab_2 = <Alt>2
-  switch_to_tab_3 = <Alt>3
-  switch_to_tab_4 = <Alt>4
-  switch_to_tab_5 = <Alt>5
-  switch_to_tab_6 = <Alt>6
+  cycle_next = ""
+  cycle_prev = ""
+  go_up = <Primary><Shift>Home
+  go_down = <Primary><Shift>End
+  go_left = <Primary>Page_Up
+  go_right = <Primary>Page_Down
+  split_horiz = <Super>d
+  split_vert = <Shift><Super>d
+  close_term = <Super>w
+  copy = <Super>c
+  paste = <Super>v
+  next_tab = <Primary>Tab
+  prev_tab = <Primary><Shift>Tab
+  switch_to_tab_1 = <Primary>1
+  switch_to_tab_2 = <Primary>2
+  switch_to_tab_3 = <Primary>3
+  switch_to_tab_4 = <Primary>4
+  switch_to_tab_5 = <Primary>5
+  switch_to_tab_6 = <Primary>6
+  switch_to_tab_7 = <Primary>7
   new_window = <Primary>n
+  preferences = <Primary>comma
 [profiles]
   [[default]]
     audible_bell = True
     background_color = "#282828"
-    cursor_color = "#aaaaaa"
-    cursor_color_fg = False
-    font = Roboto Mono 9
+    font = Source Code Pro 9
     foreground_color = "#d3cfc7"
     show_titlebar = False
     scroll_on_output = True
@@ -47,14 +41,13 @@
   [[Tomorrow Night Eighties]]
     audible_bell = True
     background_color = "#2d2d2d"
-    background_darkness = 0.91
-    cursor_color = "#cccccc"
-    cursor_color_fg = False
-    font = Roboto Mono 8
+    background_darkness = 0.96
+    font = Source Code Pro 7
     foreground_color = "#cccccc"
     show_titlebar = False
     scroll_on_output = True
     scrollback_infinite = True
+    disable_mousewheel_zoom = True
     palette = "#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff:#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff"
     use_system_font = False
 [layouts]
@@ -63,7 +56,7 @@
       type = Window
       parent = ""
       order = 0
-      position = 145:118
+      position = 208:58
       maximised = False
       fullscreen = False
       size = 1600, 950
