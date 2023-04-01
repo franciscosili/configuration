@@ -2,9 +2,10 @@
 # zsh aliases
 
 # ls
-alias ll='ls -lh --group-directories-first --color=auto'
-alias la='ls -lha --group-directories-first --color=auto'
-alias l1='ls -1 --group-directories-first --color=auto '
+alias ll='exa -lh --color=always --group-directories-first'
+alias la='exa -lha --color=always --group-directories-first'
+alias l1='exa -1 --color=always --group-directories-first'
+alias lt='exa -aT --color=always --group-directories-first'
 
 # root
 alias root='root -l'
@@ -12,8 +13,6 @@ alias rootq='root -q'
 
 # clear
 alias cl="clear"
-# clear and ls
-alias cla="clear; la"
 
 # git
 alias ga="git add ."
@@ -29,12 +28,6 @@ alias tare="tar -xzvf"
 
 # tmux
 alias tm="tmux"
-alias tma="tmux a -t"
-alias tmn="tmux new -s"
-
-
-
-
 
 # vim
 alias vi="vim"
@@ -43,8 +36,4 @@ alias vi="vim"
 
 alias 'cd..'='cd_up'
 
-# condor aliases
-alias cs="condor_submit"
-alias cq="condor_q"
-alias cw="watch condor_q -nobatch"
-alias cr="condor_rm"
+
