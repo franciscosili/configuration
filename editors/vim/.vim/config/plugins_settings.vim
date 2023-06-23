@@ -111,11 +111,11 @@
 " Deoplete -----------------------------
 
     " Use deoplete.
-    let g:deoplete#enable_at_startup = 1
-    call deoplete#custom#option({
-    \   'ignore_case': v:true,
-    \   'smart_case': v:true,
-    \})
+    "let g:deoplete#enable_at_startup = 1
+    "call deoplete#custom#option({
+    "\   'ignore_case': v:true,
+    "\   'smart_case': v:true,
+    "\})
     "" complete with words from any opened file
     let g:context_filetype#same_filetypes = {}
     let g:context_filetype#same_filetypes._ = '_'
