@@ -89,7 +89,7 @@ lxpdl(){
 
     if [[ ! -z "$lxplus_file" ]]; then
         echo Downloading file ${lxplus_file}
-        scp fsili@lxplus.cern.ch:${lxplus_file} . 
+        scp fsili@lxplus9.cern.ch:${lxplus_file} . 
     else
         echo "Input and output not set.";
         echo "Usage: lxpdldl <input_file>"
@@ -121,7 +121,7 @@ lxp(){
    if [[ ! -z "$server" ]]; then
        ssh ${user}@lxplus${server}.cern.ch
    else
-       ssh ${user}@lxplus.cern.ch
+       ssh ${user}@lxplus9.cern.ch
    fi 
 }
 
@@ -135,7 +135,7 @@ iflp(){
 
 # Get a list of last lxplus sessions
 llxp(){
-    ssh fsili@lxplus.cern.ch "tail .lasthost.log"
+    ssh fsili@lxplus9.cern.ch "tail .lasthost.log"
 }
 
 

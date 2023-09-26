@@ -68,3 +68,6 @@ export jfp="$HOME/EOS-cloud/code/local/EWK-PhX/Code/JetFakingPh"
 
 
 
+# mamba environments
+alias map="mamba activate pyroot"
+
