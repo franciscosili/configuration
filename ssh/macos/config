@@ -1,0 +1,51 @@
+Host lxplus* lxplus.cern.ch lxplus9.cern.ch
+  #HostName lxplus.cern.ch
+  User fsili
+  # ForwardX11 yes
+  ForwardX11Trusted yes 
+  #HashKnownHosts yes
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+  #GSSAPITrustDns yes
+  PreferredAuthentications gssapi-with-mic,gssapi,password
+
+
+Host *
+  ServerAliveInterval 120
+  TCPKeepAlive no
+  SendEnv LANG LC_*
+
+Host github.com
+    HostName github.com
+    User franciscosili
+    IdentityFile ~/.ssh/id_ed25519_github
+
+#Host gitlab.cern.ch
+    #HostName gitlab.ceern.ch
+    #User fsili
+    #IdentityFile ~/.ssh/id_ed25519_gitlab
+
+Host lxtunnel lxtunnel.cern.ch
+  User fsili
+  HostName lxtunnel.cern.ch
+  PubkeyAuthentication no
+  ForwardX11 yes
+  ControlPath ~/.ssh/controlmasters/%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+  Protocol 2
+  ServerAliveInterval 60
+  ServerAliveCountMax 2
+  DynamicForward 8090
+
+
+Host 163.10.100.39 iflp
+  #HostName lxplus.cern.ch
+  User fsili
+  GSSAPIAuthentication yes
+  GSSAPIDelegateCredentials yes
+  #GSSAPITrustDns yes
+  #PreferredAuthentications gssapi-with-mic,gssapi,password
+  IdentityFile ~/.ssh/id_ed25519_iflp_cluster
