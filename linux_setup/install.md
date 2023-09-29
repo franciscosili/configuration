@@ -218,3 +218,18 @@ Will be following [this tutorial](https://www.youtube.com/watch?v=jWDgdC28tYo&t=
     - Skype
     - Whatsapp
     - __INSTALL THEM FROM THE DISCOVER APP__
+
+- Install Notion app
+    ```
+    echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list 
+    sudo apt update
+    sudo apt install notion-app-enhanced
+    sudo apt install notion-app
+    ```
+
+
+- Install Kerberos
+    ```
+    sudo apt update
+    sudo apt install krb5-kdc krb5-admin-server
+    ```
