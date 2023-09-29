@@ -1,24 +1,14 @@
 [ActivityManager][Global Shortcuts]
-switch-to-activity-36d465fe-8d36-4387-b042-f689ec3546db=
+switch-to-activity-947e73d7-fccb-427e-a755-0cdea2887a25=
 
 [KDE Keyboard Layout Switcher][Global Shortcuts]
-Switch keyboard layout to English (Macintosh)=
-Switch keyboard layout to English (UK, Macintosh)=
-Switch keyboard layout to English (US)=
-Switch keyboard layout to English (US, Sun Type 6/7)=
-Switch keyboard layout to English (US, alt. intl.)=
-Switch keyboard layout to English (US, intl., with dead keys)=
-Switch keyboard layout to Spanish (Latin American)=
-Switch keyboard layout to Spanish (Latin American, dead tilde)=
-Switch keyboard layout to Spanish (Latin American, no dead keys)=
-Switch keyboard layout to Spanish (Windows)=
 Switch to Next Keyboard Layout=Meta+Ctrl+Space
 
 [StandardShortcuts]
 AboutApp=
 AboutKDE=
-Activate Next Tab=Ctrl+]; Ctrl+PgDown
-Activate Previous Tab=Ctrl+[; Ctrl+PgUp
+Activate Next Tab=Ctrl+PgDown; Ctrl+]
+Activate Previous Tab=Ctrl+PgUp; Ctrl+[
 ActualSize=Ctrl+0
 AddBookmark=Ctrl+D
 Back=
@@ -73,7 +63,7 @@ PrintPreview=
 Prior=PgUp
 Quit=Ctrl+Q
 Redo=Ctrl+Shift+Z
-Reload=Ctrl+R; Refresh; F5
+Reload=Refresh; F5; Ctrl+R
 RenameFile=F2
 Replace=
 ReportBug=
@@ -117,15 +107,15 @@ display=Display
 
 [kmix][Global Shortcuts]
 decrease_microphone_volume=Microphone Volume Down
-decrease_volume=Meta+F11; Volume Down
+decrease_volume=Volume Down; Meta+F11
 increase_microphone_volume=Microphone Volume Up
-increase_volume=Meta+F12; Volume Up
+increase_volume=Volume Up; Meta+F12
 mic_mute=Microphone Mute; Meta+Ctrl+F10
 mute=Volume Mute; Meta+F10
 
 [ksmserver][Global Shortcuts]
 Halt Without Confirmation=
-Lock Session=Meta+Ctrl+Eject; Screensaver; Ctrl+Alt+L
+Lock Session=Ctrl+Alt+L; Screensaver; Meta+Ctrl+Eject
 Log Out=Ctrl+Alt+Del
 Log Out Without Confirmation=
 Reboot Without Confirmation=
@@ -133,12 +123,15 @@ Reboot Without Confirmation=
 [kwin][Global Shortcuts]
 Activate Window Demanding Attention=
 Decrease Opacity=
+Edit Tiles=Meta+T
 Expose=Ctrl+F9
 ExposeAll=Launch (C); Ctrl+F10
 ExposeClass=Ctrl+F7
 ExposeClassCurrentDesktop=
 Increase Opacity=
+Invert=Meta+Ctrl+I
 Invert Screen Colors=
+InvertWindow=Meta+Ctrl+U
 Kill Window=Ctrl+Alt+Esc
 MoveMouseToCenter=
 MoveMouseToFocus=
@@ -174,7 +167,7 @@ Switch to Desktop 2=Meta+Ctrl+W
 Switch to Desktop 20=
 Switch to Desktop 3=Meta+Ctrl+E
 Switch to Desktop 4=Meta+Ctrl+A
-Switch to Desktop 5=Meta+Ctrl+S
+Switch to Desktop 5=
 Switch to Desktop 6=Meta+Ctrl+D
 Switch to Desktop 7=Meta+Ctrl+Z
 Switch to Desktop 8=Meta+Ctrl+X
@@ -191,6 +184,10 @@ Switch to Screen 4=
 Switch to Screen 5=
 Switch to Screen 6=
 Switch to Screen 7=
+Switch to Screen Above=
+Switch to Screen Below=
+Switch to Screen to the Left=
+Switch to Screen to the Right=
 Toggle Night Color=
 Toggle Window Raise/Lower=
 Walk Through Desktop List=
@@ -224,14 +221,18 @@ Window One Desktop Down=Meta+Ctrl+Alt+Down
 Window One Desktop Up=Meta+Ctrl+Alt+Up
 Window One Desktop to the Left=Meta+Ctrl+Alt+Left
 Window One Desktop to the Right=Meta+Ctrl+Alt+Right
+Window One Screen Down=
+Window One Screen Up=
+Window One Screen to the Left=
+Window One Screen to the Right=
 Window Operations Menu=Alt+F3
 Window Pack Down=
 Window Pack Left=
 Window Pack Right=
 Window Pack Up=
 Window Quick Tile Bottom=Ctrl+Alt+Down
-Window Quick Tile Bottom Left=Meta+Ctrl+Shift+Left
-Window Quick Tile Bottom Right=Meta+Ctrl+Shift+Right
+Window Quick Tile Bottom Left=
+Window Quick Tile Bottom Right=
 Window Quick Tile Left=Ctrl+Alt+Left
 Window Quick Tile Right=Ctrl+Alt+Right
 Window Quick Tile Top=Ctrl+Alt+Up
@@ -278,14 +279,57 @@ view_actual_size=Meta+0
 view_zoom_in=
 view_zoom_out=
 
+[lattedock][Global Shortcuts]
+activate entry 1=
+activate entry 10=
+activate entry 11=Meta+Z
+activate entry 12=Meta+X
+activate entry 13=Meta+C
+activate entry 14=Meta+V
+activate entry 15=Meta+B
+activate entry 16=Meta+N
+activate entry 17=Meta+M
+activate entry 18=Meta+,
+activate entry 19=
+activate entry 2=
+activate entry 3=
+activate entry 4=
+activate entry 5=
+activate entry 6=
+activate entry 7=
+activate entry 8=
+activate entry 9=
+new instance for entry 1=
+new instance for entry 10=Meta+Ctrl+0
+new instance for entry 11=
+new instance for entry 12=
+new instance for entry 13=
+new instance for entry 14=Meta+Ctrl+V
+new instance for entry 15=Meta+Ctrl+B
+new instance for entry 16=
+new instance for entry 17=
+new instance for entry 18=Meta+Ctrl+,
+new instance for entry 19=Meta+Ctrl+.
+new instance for entry 2=
+new instance for entry 3=Meta+Ctrl+3
+new instance for entry 4=Meta+Ctrl+4
+new instance for entry 5=Meta+Ctrl+5
+new instance for entry 6=Meta+Ctrl+6
+new instance for entry 7=Meta+Ctrl+7
+new instance for entry 8=Meta+Ctrl+8
+new instance for entry 9=Meta+Ctrl+9
+show latte global settings=Meta+W
+show latte view=Meta+`
+show view settings=Meta+A
+
 [mediacontrol][Global Shortcuts]
 mediavolumedown=
 mediavolumeup=
-nextmedia=Meta+F8; Media Next
+nextmedia=Media Next
 pausemedia=Media Pause
 playmedia=
 playpausemedia=Meta+F7
-previousmedia=Meta+F6; Media Previous
+previousmedia=Media Previous
 stopmedia=Media Stop
 
 [org.kde.dolphin.desktop][Global Shortcuts]
@@ -296,7 +340,7 @@ _launch=Launch (1)
 
 [org.kde.krunner.desktop][Global Shortcuts]
 RunClipboard=Alt+Shift+F2
-_launch=Alt+F1
+_launch=Alt+Space
 
 [org.kde.plasma.emojier.desktop][Global Shortcuts]
 _launch=Meta+.
@@ -333,8 +377,7 @@ activate task manager entry 6=Meta+6
 activate task manager entry 7=Meta+7
 activate task manager entry 8=Meta+8
 activate task manager entry 9=Meta+9
-activate widget 26=
-activate widget 59=
+activate widget 2=Alt+F1
 clear-history=
 clipboard_action=
 cycle-panels=Meta+Alt+P
@@ -361,8 +404,12 @@ kcm-users=
 powerdevilprofilesconfig=
 screenlocker=
 
-[terminator.desktop][Global Shortcuts]
-_launch=Meta+Ctrl+T
-
-[yakuake][Global Shortcuts]
-toggle-window-state=F12
+[wacomtablet][Global Shortcuts]
+Map to fullscreen=Meta+Ctrl+F
+Map to screen 1=Meta+Ctrl+1
+Map to screen 2=Meta+Ctrl+2
+Next Profile=Meta+Ctrl+N
+Previous Profile=Meta+Ctrl+P
+Toggle screen map selection=Meta+Ctrl+M
+Toggle stylus mode=Meta+Ctrl+S
+Toggle touch tool=Meta+Ctrl+T
