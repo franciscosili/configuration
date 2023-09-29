@@ -1,14 +1,28 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/fsili/.oh-my-zsh"
 
+# Set default profile to not display my user in case I'm in the current machine
+export DEFAULT_USER="fsili"
+
+
+
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="sili"
+#ZSH_THEME="multiline"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,24 +121,28 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-
+# export CONDA_BUILD_SYSROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk
 
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/fsili/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/fsili/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/fsili/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/fsili/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/fsili/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/fsili/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/fsili/anaconda3/bin:$PATH"
+        export PATH="/home/fsili/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
+
+if [ -f "/home/fsili/miniforge3/etc/profile.d/mamba.sh" ]; then
+    . "/home/fsili/miniforge3/etc/profile.d/mamba.sh"
+fi
 # <<< conda initialize <<<
-conda activate pyroot
+# mamba  activate pyroot
 
 
 # <<< Functions >>>
@@ -150,12 +168,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 
 
-
-
-
-
-
-
-
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
