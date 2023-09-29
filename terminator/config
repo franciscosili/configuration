@@ -4,18 +4,20 @@
   enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
   always_split_with_profile = True
 [keybindings]
-  new_tab = <Primary>t
+  new_tab = <Primary><Shift>t
   cycle_next = ""
   cycle_prev = ""
+  go_next = ""
+  go_prev = ""
   go_up = <Primary><Shift>Home
   go_down = <Primary><Shift>End
   go_left = <Primary>Page_Up
   go_right = <Primary>Page_Down
-  split_horiz = <Super>d
-  split_vert = <Shift><Super>d
+  split_horiz = <Primary><Alt>d
+  split_vert = <Primary><Shift>d
   close_term = <Super>w
-  copy = <Super>c
-  paste = <Super>v
+  copy = <Primary><Shift>c
+  paste = <Primary><Shift>v
   next_tab = <Primary>Tab
   prev_tab = <Primary><Shift>Tab
   switch_to_tab_1 = <Primary>1
@@ -25,7 +27,9 @@
   switch_to_tab_5 = <Primary>5
   switch_to_tab_6 = <Primary>6
   switch_to_tab_7 = <Primary>7
-  new_window = <Primary>n
+  switch_to_tab_8 = <Primary>8
+  switch_to_tab_9 = <Primary>9
+  new_window = <Primary><Shift>n
   preferences = <Primary>comma
 [profiles]
   [[default]]
@@ -42,7 +46,7 @@
     audible_bell = True
     background_color = "#2d2d2d"
     background_darkness = 0.96
-    font = Source Code Pro 7
+    font = MesloLGS NF 7
     foreground_color = "#cccccc"
     show_titlebar = False
     scroll_on_output = True
