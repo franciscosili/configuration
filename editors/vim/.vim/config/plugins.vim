@@ -33,7 +33,7 @@
 " Pending tasks list
     Plug 'fisadev/FixedTaskList.vim'
 " Async autocompletion
-    "if using_neovim && vim_plug_just_installed
+
         "Plug 'Shougo/deoplete.nvim', {'do': ':autocmd VimEnter * UpdateRemotePlugins'}
     "else
         "Plug 'Shougo/deoplete.nvim'
@@ -65,7 +65,7 @@
 " Window chooser
     Plug 't9md/vim-choosewin'
 " Automatically sort python imports
-    Plug 'fisadev/vim-isort'
+"    Plug 'fisadev/vim-isort'
 " Highlight matching html tags
     Plug 'valloric/MatchTagAlways'
 " Generate html in a simple way

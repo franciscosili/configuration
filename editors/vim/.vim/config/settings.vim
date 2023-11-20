@@ -58,17 +58,19 @@
     set fillchars+=vert:\ 
 
 " use 256 colors when possible
-    if $TERM !~# "konsole.*"
-        " As a work around for the following bugs in kde4's konsole:
-        "   use the output of 16.colorscheme.rb and don't set base16colorspace.
-        "   base-shell script will not be called
-        " https://github.com/chriskempson/base16-shell/issues/31
-        " https://bugs.kde.org/show_bug.cgi?id=344181
-        set termguicolors
-        let base16colorspace=256
+    if has('gui_running') || using_neovim || (&term =~? 'mlterm\|xterm\|xterm-256\|screen-256')
+        if !has('gui_running')
+            let &t_Co = 256
+        endif
+        let base16colorspace=256  " Access colors present in 256 colorspace
+        colorscheme base16-tomorrow-night-eighties
+        " colorscheme vim-monokai-tasty
+    else
+        let base16colorspace=256  " Access colors present in 256 colorspace
+        colorscheme base16-tomorrow-night-eighties
+        " colorscheme delek
     endif
 
-    colorscheme base16-tomorrow-night-eighties
 
 " -Fold code with indentation
    " some usecases:
@@ -90,7 +92,7 @@
     set path+=**
 
 " needed so deoplete can auto select the first suggestion
-    "set completeopt+=noinsert
+    set completeopt+=noinsert
 " comment this line to enable autocompletion preview window
 " (displays documentation related to the selected completion option)
 " disabled by default because preview makes the window flicker
