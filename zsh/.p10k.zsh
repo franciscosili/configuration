@@ -394,7 +394,12 @@
     fi
 
     # Styling for different parts of Git status.
-    local       meta='%7F' # white foreground
+    # local       meta='%7F' # white foreground
+    # local      clean='%0F' # black foreground
+    # local   modified='%0F' # black foreground
+    # local  untracked='%0F' # black foreground
+    # local conflicted='%1F' # red foreground
+    local       meta='%0F' # white foreground
     local      clean='%0F' # black foreground
     local   modified='%0F' # black foreground
     local  untracked='%0F' # black foreground
@@ -414,20 +419,20 @@
     if [[ -n $VCS_STATUS_TAG
           # Show tag only if not on a branch.
           # Tip: To always show tag, delete the next line.
-          && -z $VCS_STATUS_LOCAL_BRANCH  # <-- this line
+          # && -z $VCS_STATUS_LOCAL_BRANCH  # <-- this line
         ]]; then
       local tag=${(V)VCS_STATUS_TAG}
       # If tag name is at most 32 characters long, show it in full.
       # Otherwise show the first 12 … the last 12.
       # Tip: To always show tag name in full without truncation, delete the next line.
       (( $#tag > 32 )) && tag[13,-13]="…"  # <-- this line
-      res+="${meta}#${clean}${tag//\%/%%}"
+      res+=" ${meta}#${clean}${tag//\%/%%}"
     fi
 
     # Display the current Git commit if there is no branch and no tag.
     # Tip: To always display the current Git commit, delete the next line.
-    [[ -z $VCS_STATUS_LOCAL_BRANCH && -z $VCS_STATUS_TAG ]] &&  # <-- this line
-      res+="${meta}@${clean}${VCS_STATUS_COMMIT[1,8]}"
+    # [[ -z $VCS_STATUS_LOCAL_BRANCH && -z $VCS_STATUS_TAG ]] &&  # <-- this line
+      res+=" ${meta}@${clean}${VCS_STATUS_COMMIT[1,8]}"
 
     # Show tracking branch name if it differs from local branch.
     if [[ -n ${VCS_STATUS_REMOTE_BRANCH:#$VCS_STATUS_LOCAL_BRANCH} ]]; then
@@ -1738,6 +1743,7 @@
   #   - same-dir: Trim down prompt when accepting a command line unless this is the first command
   #               typed after changing current working directory.
   typeset -g POWERLEVEL9K_TRANSIENT_PROMPT=same-dir
+
 
   # Instant prompt mode.
   #
