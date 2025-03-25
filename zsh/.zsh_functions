@@ -97,6 +97,24 @@ lxpdl(){
 }
 
 
+lxpup(){
+    local lxplus_dir="$2"
+    local file="$1"
+
+    if [[ ! -z "$lxplus_dir" && ( -f "$file" || -d "${file}" ) ]]; then
+        if [[ -f "$file" ]]; then
+	    echo Uploading file ${file} to ${lxplus_dir}
+            scp ${file} fsili@lxplus9.cern.ch:${lxplus_dir}/ 
+	elif [[ -d "$file" ]]; then
+	    echo Uploading directory ${file} to ${lxplus_dir}
+            scp -r ${file} fsili@lxplus9.cern.ch:${lxplus_dir}/ 
+	fi
+    else
+        echo "Input and output not set.";
+        echo "Usage: lxpup <file> <lxplus_dir>"
+    fi
+}
+
 
 # Download and decompress files
 dldc(){
